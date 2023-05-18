@@ -1,0 +1,119 @@
+body {
+  background-color: #ffffff;
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 1rem auto;
+  align-items: center;
+}
+
+.header {
+  width: 100vw;
+  flex-wrap: wrap;
+  background: rgb(70,252,195);
+background: radial-gradient(circle, rgba(70,252,195,0.8995973389355743) 0%, rgba(157,63,251,0.8407738095238095) 100%);
+  padding: 1rem;
+}
+
+.form-group {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group > label {
+  color: #222;
+  font-size: 0.75rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 0.25rem;
+}
+
+.form-group > input,
+select {
+  outline: none;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.25rem;
+}
+#category {
+  padding: 0.25rem;
+}
+
+.btn {
+  background-color: #2989ff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  margin-top: 0.75rem;
+}
+.btn:hover {
+  background-color: #147eff;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: 5px 8px 10px 1px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  /* min-height: 150px; */
+  width: 250px;
+  margin: 1rem;
+  transform: perspective(300px) rotateY(var(--rotate-y, 0))
+    translateY(var(--translate-y, 0));
+  transform-style: preserve-3d;
+  transition: 250ms;
+  cursor: pointer;
+}
+
+.card:hover {
+  --translate-y: -2px;
+  box-shadow: -5px 8px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card.flip {
+  --rotate-y: 180deg;
+}
+
+.card .front {
+  left: 0;
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  padding: 1rem;
+  backface-visibility: hidden;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+  color: green;
+}
+
+.flashcard-options {
+  margin-top: 0.5rem;
+}
+
+.flashcard-option {
+  margin-top: 0.25rem;
+  color: #555;
+  font-size: 0.75rem;
+}
+
+.flashcard-option:first-child {
+  margin-top: 0;
+}
